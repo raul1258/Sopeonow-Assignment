@@ -29,7 +29,7 @@
     <!-- Button trigger modal -->
     <button
       type="button"
-      class="btn btn-primary"
+      class="btn launch-btn"
       data-bs-toggle="modal"
       data-bs-target="#exampleModal"
     >
@@ -54,9 +54,7 @@
                 </div>
                 <div class="info">
                   <h4 class="header-title">ETHAN WONG</h4>
-                  <p class="header-sub-title">
-                    Male,60 yrs (Senior Citizen)
-                  </p>
+                  <p class="header-sub-title">Male,60 yrs (Senior Citizen)</p>
                 </div>
               </div>
               <div class="header-right">
@@ -67,29 +65,34 @@
               </div>
             </div>
 
-
-            
             <div class="modal-body">
               <div class="pateint-info">
                 <div class="row row-cols-3">
-                    <div class="col patientId">
-                        <label for="patient-Id">Patient ID</label>
-                        <i class="fa-regular fa-address-card form-icons"></i>
-                        <input type="text" placeholder="Enter Your ID" id="patient_id" />
-                    </div>
-                    <div class="visitId">
-                        <label for="visit-id">Visit ID </label>
-                        <i class="fa-solid fa-calendar-days form-icons"></i>
-                        <input type="text" placeholder="Enter Your Visit ID" id="visit_id" />
-                      </div>
-                      <div class="ward">
-                        <label for="ward">Ward</label>
-                        <i class="fa-solid fa-hospital form-icons"></i>
-                        <input type="text" placeholder="Enter Ward" id="ward" />
-                      </div>
+                  <div class="col patientId">
+                    <label for="patient-Id">Patient ID</label>
+                    <i class="fa-regular fa-address-card form-icons"></i>
+                    <input
+                      type="text"
+                      placeholder="Enter Your ID"
+                      id="patient_id"
+                    />
+                  </div>
+                  <div class="visitId">
+                    <label for="visit-id">Visit ID </label>
+                    <i class="fa-solid fa-calendar-days form-icons"></i>
+                    <input
+                      type="text"
+                      placeholder="Enter Your Visit ID"
+                      id="visit_id"
+                    />
+                  </div>
+                  <div class="ward">
+                    <label for="ward">Ward</label>
+                    <i class="fa-solid fa-hospital form-icons"></i>
+                    <input type="text" placeholder="Enter Ward" id="ward" />
+                  </div>
                 </div>
 
-             
                 <div class="row row-cols-2 mt-3">
                   <div class="col bed">
                     <label for="bed-id">Bed</label>
@@ -98,95 +101,126 @@
                   </div>
                   <div class="col payor">
                     <label for="payor-id"></label>
-                      Payor<i class="fa-solid fa-umbrella form-icons"></i
-                    >
-                    <input type="text" placeholder="Enter Payor" id="payor-id" />
+                    Payor<i class="fa-solid fa-umbrella form-icons"></i>
+                    <input
+                      type="text"
+                      placeholder="Enter Payor"
+                      id="payor-id"
+                    />
                   </div>
                 </div>
               </div>
             </div>
 
-               <!-- till here completed -->
             <div class="admission-journey">
               <div class="modal-body">
-                <div class="journey-title d-flex justify-content-between">
-                  <h2 class="journey-heading">Admission Journey</h2>
-                  <div class="time">
-                    <p class="m-auto elapsed-time">Elapsed Time</p>
-                    <button class="px-2 ms-3 journey-btn">02.45</button>
+                <div class="title d-flex justify-content-between">
+                  <p class="heading">Admission Journey</p>
+                  <div class="elapsed_time">
+                    <p class="m-auto elapsed-time">
+                      Elapsed Time
+                      <span
+                        ><button class="px-3 ms-3 journey-btn">
+                          02.45
+                        </button></span
+                      >
+                    </p>
                   </div>
                 </div>
 
-                <div class="timeline">
-                  <div class="container-timeline right">
+                <!-- till here completed -->
+                <div class="journey-timeline">
+                  <div class="container-timeline">
                     <i class="fa-solid fa-check"></i>
+
                     <div class="text-box">
                       <div class="journey">
-                        <h3 class="journey-detail">Admission Request</h3>
-                        <small>Dec 06 2021 08:36 AM</small>
+                        <p class="journey-heading">
+                          Admission Request
+                          <span class="date-time">Dec 06 2021 08:36 AM</span>
+                        </p>
                       </div>
-                      <div class="dr-name">
-                        <i class="fa-solid fa-user-doctor"></i>
-                        <p>Ratha AP</p>
+                      <div class="doctor-name">
+                        <span>
+                          <i class="fa-solid fa-user-doctor"></i> Ratha Ap</span
+                        >
+                      </div>
+                    </div>
+                    <div>
+                      <span class="qualification_line"> </span>
+                    </div>
+                  </div>
+                  <span>00:24</span>
+
+                  <div class="container-timeline mt-1">
+                    <i class="fa-solid fa-check"></i>
+
+                    <div class="text-box">
+                      <div class="journey">
+                        <p class="journey-heading">
+                          Sent for IGL Approval
+                          <span class="date-time">Dec 06 2021 09:00 AM</span>
+                        </p>
+                      </div>
+                      <div class="doctor-name">
+                        <span>
+                          <i class="fa-solid fa-user-doctor"></i> Jim Chin</span
+                        >
                       </div>
                     </div>
                   </div>
+                  <span>02:23</span>
 
-                  <div class="container-timeline right">
+                  <div class="container-timeline">
                     <i class="fa-solid fa-check"></i>
                     <div class="text-box">
                       <div class="journey">
-                        <h3 class="journey-detail">Sent for IGL Approval</h3>
-                        <small>Dec 06 2021 09:00 AM</small>
+                        <p class="journey-heading">
+                          Received IGL Apprval
+                          <span class="date-time">Dec 06 2021 11:23 AM</span>
+                        </p>
                       </div>
-                      <div class="dr-name">
-                        <i class="fa-solid fa-user-doctor"></i>
-                        <p>Jim Chin</p>
+                      <div class="doctor-name">
+                        <span>
+                          <i class="fa-solid fa-user-doctor"></i> Jim Chin</span
+                        >
                       </div>
                     </div>
                   </div>
+                  <span>00:15</span>
 
-                  <div class="container-timeline right">
+                  <div class="container-timeline">
                     <i class="fa-solid fa-check"></i>
                     <div class="text-box">
                       <div class="journey">
-                        <h3 class="journey-detail">Received IGL Approval</h3>
-                        <small>Dec 06 2021 11:23 AM</small>
-                      </div>
-                      <div class="dr-name">
-                        <i class="fa-solid fa-user-doctor"></i>
-                        <p>Jim Chin</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="container-timeline right">
-                    <i class="fa-solid fa-check"></i>
-                    <div class="text-box">
-                      <div class="journey">
-                        <h3 class="journey-detail">
+                        <p class="journey-heading">
                           Requested Bed Confirmation
-                        </h3>
-                        <small>Dec 06 2021 11:38 AM</small>
+                          <span class="date-time">Dec 06 2021 11:38 AM</span>
+                        </p>
                       </div>
-                      <div class="dr-name">
-                        <i class="fa-solid fa-user-doctor"></i>
-                        <p>Jim Chin</p>
+                      <div class="doctor-name">
+                        <span>
+                          <i class="fa-solid fa-user-doctor"></i> Jim Chin</span
+                        >
                       </div>
                     </div>
                   </div>
 
-                  <div class="container-timeline right">
+                  <div class="container-timeline">
                     <i class="fa-solid fa-bed-pulse"></i>
                     <div class="text-box">
-                      <h3 class="journey-detail">Admitted</h3>
+                      <div class="journey">
+                        <p class="journey-heading">Admitted</p>
+                      </div>
                     </div>
                   </div>
 
-                  <div class="container-timeline right">
+                  <div class="container-timeline">
                     <i class="fa-solid fa-bed"></i>
                     <div class="text-box">
-                      <h3 class="journey-detail">Accepted</h3>
+                      <div class="journey">
+                        <p class="journey-heading">Accepted</p>
+                      </div>
                     </div>
                   </div>
                 </div>
