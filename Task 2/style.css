@@ -88,9 +88,8 @@ input {
     padding: 0.5rem 3.1rem;
     position: relative;
     top: 5%;
-
+   
 }
-
   
 .container-timeline i {
     color: #88A1C7;
@@ -100,6 +99,7 @@ input {
     font-size: 1rem;
     font-weight: 500;
     margin-top: 1rem;
+    
 }
 .journey span{
     font-size: .8rem !important;
@@ -107,7 +107,15 @@ input {
 }
 .journey-timeline {
     position: relative;
+    animation-name: move;
+    animation-duration: 3s;  
+    animation-fill-mode:backwards;
 }
+@keyframes move {
+    from {top: 200px;}
+    to {top: 0px; }
+  }
+
 
 .container-timeline .text-box {
    position: relative;
@@ -199,3 +207,9 @@ input {
         top: 45%;
     }
 }
+
+
+
+
+
+
