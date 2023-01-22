@@ -85,3 +85,76 @@ var options = {
   
   var chart = new ApexCharts(document.querySelector("#chart"), options);
   chart.render();
+
+
+
+
+  var canvas = document.getElementById("myChart");
+  var ctx = canvas.getContext("2d");
+
+  var horizonalLinePlugin = {
+    id: 'horizontalLine',
+    afterDraw: function(chartInstance) {
+    var yScale = chartInstance.scales["y-axis-0"];
+    var canvas = chartInstance.chart;
+    var ctx = canvas.ctx;
+    var index;
+    var line;
+    var style;
+
+    if (chartInstance.options.horizontalLine) {
+      for (index = 0; index < chartInstance.options.horizontalLine.length; index++) {
+        line = chartInstance.options.horizontalLine[index];
+
+        if (!line.style) {
+          style = "rgba(169,169,169, .6)";
+        } else {
+          style = line.style;
+        }
+
+        if (line.y) {
+          yValue = yScale.getPixelForValue(line.y);
+        } else {
+          yValue = 0;
+        }
+
+        ctx.lineWidth = 3;
+
+        if (yValue) {
+          ctx.beginPath();
+          ctx.moveTo(0, yValue);
+          ctx.lineTo(canvas.width, yValue);
+          ctx.strokeStyle = style;
+          ctx.stroke();
+        }
+
+        if (line.text) {
+          ctx.fillStyle = style;
+          ctx.fillText(line.text, 0, yValue + ctx.lineWidth);
+        }
+      }
+      return;
+    }
+  }
+};
+
+Chart.register(horizonalLinePlugin);
+var myChart = new Chart(ctx, {
+  type: 'line',
+  data: data,
+  options: {
+    "horizontalLine": [{
+      "y": 75.8,
+      "style": "#ff0000",
+      "text": "upper-limit"
+    }, {
+      "y": 62.3,
+      "style": "#00ff00",
+      "text": "avg"
+    }, {
+      "y": 48.8,
+      "style": "#0000ff",
+      "text": "lower-limit"
+    }]
+  }
+});
