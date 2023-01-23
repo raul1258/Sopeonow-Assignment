@@ -20,6 +20,7 @@ var options = {
         type: "line",
         //timeformat is not getting passed in data 
         data: [ 0, 2.18, 2.57, 2.32, 1.45, , 0, 0, 0, 0],
+     
       },
     ],
   
